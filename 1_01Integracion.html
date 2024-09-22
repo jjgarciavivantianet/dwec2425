@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<!-- Definición en la cabecera e invocación justo después. La cabecera h1 aparece después-->
+
+<html>
+    <head>
+            <meta charset="UTF-8"> 
+            <script>
+                function hola(){
+                alert("Hola mundo");
+                }
+                hola();
+            </script>
+    </head>
+    <body>
+        <h1>Este es el primer HTML con código javascript incrustado</h1> 
+    </body>
+
+
+<!--Definición en el cuerpo e invocación justo después. Las cabeceras h1 aparecen una antes y otra después
+Comprobar resultados con distintos navegadores-->
+<!--
+
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>Este es el primer HTML con código javascript incrustado</h1>
+            <script>
+                function hola(){
+                alert("Hola mundo");
+                }
+                hola();
+            </script>
+        <h1>Después de la ventana emergente</h1>
+    </body>
+</html>
+-->
+
+<!--Ahora se define en la cabecera y se invoca desde el cuerpo intercalándola entre las dos cabeceras-->
+<!--
+<html>
+    <head>
+        <meta charset="UTF-8">
+            <script>
+                function hola(){
+                alert("Hola mundo");
+                }
+            </script>
+    </head>
+    <body>
+        <h1>Este es el primer HTML con código javascript incrustado</h1>
+        <script>
+            hola();
+        </script>
+        <h1>Después de la ventana emergente</h1>
+    </body>
+</html>
+-->
+<!--Ahora con fichero js-->
+<!-- <head>
+    <meta charset="UTF-8">
+        <script src ="hola.js"></script>
+</head>
+<body>
+    <h1>Este es el primer HTML con código javascript incrustado</h1>
+    <script>
+        hola();
+    </script>
+    <h1>Después de la ventana emergente</h1>
+</body> -->
+</html>
