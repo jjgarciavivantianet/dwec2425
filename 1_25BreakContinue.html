@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Saltos. Sentencias break y continue</title>
+	</head>
+
+	<body>
+		<script>
+		/* BREAK: salir o saltar fuera un bucle, finalizándolo.
+		   CONTINUE: saltar hasta la siguiente iteración del bucle; permite saltar una o más iteraciones. */
+
+		// Ejemplo de bucle con break
+		  var i;
+		  for (i = 0; i < 10; i++){
+		  	if (i == 3){ 
+		  		break;
+		  	}
+		  	alert ("i = "+i);
+            // Se interrumpe en el 3. Solo itera 0,1 y 2
+		  }
+
+		//Ejemplo de bucle con continue
+		 var j;
+		  for (j = 0; j < 10; j++){
+		  	if (j == 3 || j == 5){ 
+		  		continue;
+		  	}
+		  	alert ("j = "+j);
+            // Si solo j se salta el 3: 1,2,4,5...
+            // En este caso 1,2,4,6,7,8,9
+		  }
+
+		  /*ETIQUETAS: preceder una sentencia con el nombre de la etiqueta seguido de dos puntos.
+		  - Break sin etiquetas se puede utilizar en bucles o switch.
+		  - Break con etiqueta también se puede utilizar en un bloque de sentencias etiquetado.
+		  - En el caso del Continue: la etiqueta es opcional. Siempre debe estar dentro un bucle.
+		   */
+
+		  //Ejemplo de break con etiquetas
+		  var animales = ["perro", "gato", "hamster"];
+
+		  ver_animales:
+		  {
+		  	alert (animales[0]);
+		  	alert (animales[1]);
+		  	break ver_animales; // Hay que especificar lo que se quiere romper. 
+            // No se puede sin etiqueta porque NO está en un bucle
+		  	alert (animales[2]);
+		  }
+
+		  //Ejemplo de continue con etiquetas
+		  var k;
+          //etiqueta
+		  bucle: 
+		  	for (k = 0; k < 10; k++){
+		  	if (k == 3 || k == 5){ 
+		  		continue bucle;
+		  	}
+		  	alert ("k = "+k);
+		}
+
+		</script>
+	</body>
+</html>
