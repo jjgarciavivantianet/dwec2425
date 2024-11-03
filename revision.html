@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <script>
+        /*
+        Solicitar una frase desde teclado, almacenar cada palabra en un elemento de un array y mostrar los siguientes datos:
+            - La primera palabra de la frase.
+            - La última palabra de la frase.
+            - El número de palabras en la frase.
+        */
+
+        function solicitarFrase() {
+            let usuario = prompt("Introduce una frase");
+            return usuario.split(" "); // Dividir la frase en palabras
+        }
+
+        function mostrarDatos(fraseArray) {
+            console.log("Primera palabra: " + fraseArray[0]);
+            console.log("Última palabra: " + fraseArray[fraseArray.length - 1]);
+            console.log("Número de palabras: " + fraseArray.length);
+        }
+
+        let fraseArray = solicitarFrase(); // Llamar a la función para obtener el array de palabras
+        mostrarDatos(fraseArray); // Mostrar los datos de la frase
+    </script>
+</body>
+</html>

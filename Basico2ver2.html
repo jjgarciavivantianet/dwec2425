@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         function mediaAritmetica(a,n){
+            return(a/n)
+        }
+        function calcularSuma(suma=0, contador=0) {
+            let numero = parseFloat(prompt("Introduce un número ( número negativo para terminar):"));
+            if (numero < 0) { 
+            console.log(suma)
+            console.log(contador)
+            console.log(mediaAritmetica(suma,contador))
+            } 
+            else{
+            suma+=numero
+            contador+=1
+            calcularSuma(suma,contador)
+            }
+                
+       }
+        
+      calcularSuma()
+    </script>
+</body>
+</html>

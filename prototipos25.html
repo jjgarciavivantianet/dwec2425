@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Explicación del Prototype</h1>
+    <p id="demo"></p>
+    <script>
+        function Persona(nombre,apellido,ojos){
+            this.nombre=nombre;
+            this.apellido=apellido;
+            this.ojos=ojos;
+        }
+        const miPadre=new Persona("Juan", "Garcia", "azul")
+        const miMadre=new Persona("Amparo", "López", "verde")
+
+        Persona.prototype.nacionalidad="española"
+        document.getElementById("demo").innerHTML= "la nacionalidad de mi padre es  " + miPadre.nacionalidad
+
+
+    </script>
+</body>
+</html>

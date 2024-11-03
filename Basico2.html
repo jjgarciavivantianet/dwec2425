@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Función recursiva para obtener la suma y la cantidad de números introducidos
+function obtenerSumaYContador(suma = 0, contador = 0) {
+    let numero = parseFloat(prompt("Introduce un número (introduce un número negativo para terminar):"));
+
+    // Caso base: si el número es negativo, devolvemos la suma y el contador
+    if (numero < 0) {
+        return { suma, contador };
+    }
+
+    // Llamada recursiva acumulando la suma y aumentando el contador
+    return obtenerSumaYContador(suma + numero, contador + 1);
+}
+
+// Función para calcular la media
+function calcularMedia(suma, contador) {
+    if (contador === 0) return 0;
+    return suma / contador;
+}
+
+// Programa principal
+function programaPrincipal() {
+    let { suma, contador } = obtenerSumaYContador();
+
+    if (contador > 0) {
+        let media = calcularMedia(suma, contador);
+        console.log("La suma de los números es: " + suma);
+        console.log("La media de los números es: " + media);
+    } else {
+        console.log("No se introdujeron números válidos.");
+    }
+}
+
+// Ejecutar el programa principal
+programaPrincipal();
+
+    </script>
+</body>
+</html>
